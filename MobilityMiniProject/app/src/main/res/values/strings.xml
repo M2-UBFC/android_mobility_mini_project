@@ -1,0 +1,18 @@
+<resources xmlns:id="http://schemas.android.com/tools">
+    <string name="app_name">Mobility Mini Project</string>
+
+    <string-array name="country_arrays">
+        <item id="0">Crous Restaurant Duvillard</item>
+        <item id="1">IUT Bus stop</item>
+        <item id="2">UTBM Belfort</item>
+        <item id="3">Gare de Belfort</item>
+        <item id="4">Place Corbis</item>
+        <item id="5">Another bus stop in belfort</item>
+        <item id="6">Cathédrale</item>
+        <item id="7">Bus stop 2 Montbéliard</item>
+        <item id="8">Bus stop 1 Montbéliard</item>
+        <item id="9">Bus stop Université Montbéliard</item>
+    </string-array>
+
+
+</resources>

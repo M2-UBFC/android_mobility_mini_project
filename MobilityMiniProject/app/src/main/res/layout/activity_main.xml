@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F3F1"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+    <Spinner
+        android:id="@+id/start1"
+        android:layout_width="135dp"
+        android:layout_height="42dp"
+        android:entries="@array/country_arrays"
+        app:layout_constraintBottom_toBottomOf="@+id/start2"
+        app:layout_constraintEnd_toStartOf="@+id/start2"
+        app:layout_constraintTop_toTopOf="@+id/start2" />
+
+    <Spinner
+        android:id="@+id/start2"
+        android:layout_width="135dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginBottom="11dp"
+        android:entries="@array/country_arrays"
+        app:layout_constraintBottom_toTopOf="@+id/endSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mapView"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Spinner
+        android:id="@+id/start3"
+        android:layout_width="135dp"
+        android:layout_height="42dp"
+        android:entries="@array/country_arrays"
+        app:layout_constraintBottom_toBottomOf="@+id/start2"
+        app:layout_constraintStart_toEndOf="@+id/start2"
+        app:layout_constraintTop_toTopOf="@+id/start2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Spinner
+        android:id="@+id/endSpinner"
+        android:layout_width="310dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:entries="@array/country_arrays"
+        app:layout_constraintBottom_toTopOf="@+id/computeButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/start1" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="62dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="333dp"
+        android:layout_marginBottom="8dp"
+        android:text="Depart"
+        app:layout_constraintBottom_toTopOf="@+id/start1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mapView" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="61dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="12dp"
+        android:text="Arrival"
+        app:layout_constraintBottom_toBottomOf="@+id/endSpinner"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/GoButton"
+        android:layout_width="91dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorPrimaryDark"
+        android:onClick="ComputeItinerary"
+        android:text="Itinerary"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/computeButton" />
+
+    <Button
+        android:id="@+id/computeButton"
+        android:layout_width="134dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorPrimaryDark"
+        android:onClick="computeDestination"
+        android:text="Compute Destination"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/resetMapButton" />
+
+    <Button
+        android:id="@+id/resetMapButton"
+        android:layout_width="134dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorPrimaryDark"
+        android:onClick="resetMap"
+        android:text="Reset map"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/computeButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <WebView
+        android:id="@+id/mapView"
+        android:layout_width="411dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>
